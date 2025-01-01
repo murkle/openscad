@@ -57,14 +57,14 @@ module edge() {
     // Add edges to complete the board (on the right and top)
     // Right edge
     translate([board_size - ridge_width, 0-4*pipe_radius, thickness])
-        cube([ridge_width, board_size+4*pipe_radius, ridge_height], center = false);
+        cube([ridge_width, board_size+4*pipe_radius, ridge_height*2], center = false);
     translate([-4*pipe_radius, -4*pipe_radius, thickness])
-        cube([ridge_width, board_size+4*pipe_radius, ridge_height], center = false);
+        cube([ridge_width, board_size+4*pipe_radius, ridge_height*2], center = false);
     // Top edge
     translate([-4*pipe_radius, board_size - ridge_width, thickness])
-        cube([board_size+4*pipe_radius, ridge_width, ridge_height], center = false);
+        cube([board_size+4*pipe_radius, ridge_width, ridge_height*2], center = false);
     translate([-4*pipe_radius, -4*pipe_radius, thickness])
-        cube([board_size+4*pipe_radius, ridge_width, ridge_height], center = false);
+        cube([board_size+4*pipe_radius, ridge_width, ridge_height*2], center = false);
 }
 
 module board() {
